@@ -1,0 +1,2 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+public/uploads/Mohamed_LAKHLIFI_d7b5480bda.mp4 filter=lfs diff=lfs merge=lfs -text

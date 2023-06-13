@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "member_profils",
+  "info": {
+    "name": "Member_profil",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "team_bio_fr": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "description_fr": {
+      "type": "richtext"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "video": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "parcours_fr": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "video",
+        "photo"
+      ]
+    },
+    "team_bio_en": {
+      "type": "string"
+    },
+    "description_en": {
+      "type": "richtext"
+    },
+    "parcours_en": {
+      "type": "richtext"
+    }
+  }
+}
